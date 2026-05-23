@@ -1,0 +1,125 @@
+# ==========================================
+# NDZALAMA IA — Backend .gitignore
+# Spring Boot + Maven + Docker
+# ==========================================
+
+# ==========================================
+# JAVA / MAVEN
+# ==========================================
+target/
+build/
+out/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven Wrapper
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+
+# ==========================================
+# SPRING BOOT
+# ==========================================
+logs/
+*.log
+spring.log
+
+# ==========================================
+# APPLICATION CONFIG / SECRETS
+# ==========================================
+.env
+.env.*
+*.env
+
+application-local.yml
+application-dev.yml
+application-prod.yml
+
+secrets/
+credentials/
+
+# ==========================================
+# IDEs / EDITORS
+# ==========================================
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# NetBeans
+nbproject/
+
+# ==========================================
+# DATABASE
+# ==========================================
+*.db
+*.sqlite
+*.sqlite3
+
+postgres-data/
+redis-data/
+
+# ==========================================
+# DOCKER
+# ==========================================
+docker-data/
+docker-compose.override.yml
+
+# ==========================================
+# OPERATING SYSTEM
+# ==========================================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Linux
+*~
+
+# ==========================================
+# TEMP / CACHE
+# ==========================================
+tmp/
+temp/
+.cache/
+
+# ==========================================
+# SECURITY FILES
+# ==========================================
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+
+# ==========================================
+# TESTS / REPORTS
+# ==========================================
+reports/
+test-output/
+
+# ==========================================
+# MISC
+# ==========================================
+*.swp
+*.swo
+```
+# ========================================
+# ENV / LOCAL CONFIG
+# ========================================
+
+src/main/resources/application-local.properties

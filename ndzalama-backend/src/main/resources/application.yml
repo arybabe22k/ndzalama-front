@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ndzalama
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+
+jwt:
+  secret: ndzalama-super-secret-key-with-at-least-64-characters-2026
+  access-expiration: 1800000
+  refresh-expiration: 604800000
