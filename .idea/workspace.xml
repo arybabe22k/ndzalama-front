@@ -4,7 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25e9d2cb-eb17-43c9-ad54-06893662d0aa" name="Changes" comment="" />
+    <list default="true" id="25e9d2cb-eb17-43c9-ad54-06893662d0aa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/controller/FraudController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/fraud/FraudHistoryResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/fraud/FraudRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/fraud/FraudResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/model/FraudReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/repository/FraudReportRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/FraudService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/controller/FraudController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/fraud/FraudRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/fraud/FraudResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/service/FraudService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/NdzalamaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/NdzalamaApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/LoginRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/RefreshRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/RefreshRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/RegisterRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/TokenResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/TokenResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/security/JwtAuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/security/JwtAuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/security/JwtUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/security/JwtUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/security/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/security/UserDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/service/AuthService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +55,9 @@
   &quot;fromUser&quot;: false
 }</component>
   <component name="ProjectId" id="3E1uiZuzczZmIBOST8GrbXupNar" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,7 +72,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.NdzalamaApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Merging main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Aristides Guilherme/Desktop/Ndzalama IA - VM",
     "node.js.detected.package.eslint": "true",
@@ -64,5 +94,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
