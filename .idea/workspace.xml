@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25e9d2cb-eb17-43c9-ad54-06893662d0aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/controller/EducationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/education/FinancialTipResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/EducationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/controller/GamificationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/gamification/AchievementResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/gamification/GamificationProfileResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/model/Achievement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/repository/AchievementRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/AchievementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/GamificationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/FraudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/FraudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/controller/FraudController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/controller/FraudController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/service/FraudService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/service/FraudService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -18,6 +18,7 @@ import java.util.regex.Pattern;
 @Service
 public class FraudService {
 
+    private final GamificationService gamificationService;
     private final FraudReportRepository fraudReportRepository;
     private final UserRepository userRepository;
 
@@ -32,10 +33,12 @@ public class FraudService {
 
     public FraudService(
             FraudReportRepository fraudReportRepository,
-            UserRepository userRepository
+            UserRepository userRepository,
+            GamificationService gamificationService
     ) {
         this.fraudReportRepository = fraudReportRepository;
         this.userRepository = userRepository;
+        this.gamificationService = gamificationService;
     }
 
     // Analyzes suspicious content and saves the report for the authenticated user.
@@ -55,6 +58,7 @@ public class FraudService {
         report.setAdvice(result.getAdvice());
 
         fraudReportRepository.save(report);
+        gamificationService.addPoints(user, 10);
 
         return result;
     }
