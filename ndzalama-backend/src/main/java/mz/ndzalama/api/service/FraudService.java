@@ -94,12 +94,12 @@ public class FraudService {
 
         if (ANY_LINK_PATTERN.matcher(content).find()) {
             score += 20;
-            signals.add("External link detected.");
+            signals.add("Link externo detectado.");
         }
 
         if (SHORT_LINK_PATTERN.matcher(content).find()) {
             score += 30;
-            signals.add("Shortened or masked link detected.");
+            signals.add("Link encurtado ou mascarado detectado.");
         }
 
         if (
@@ -109,7 +109,7 @@ public class FraudService {
                         && PHONE_NUMBER_PATTERN.matcher(content).find()
         ) {
             score += 35;
-            signals.add("Request to send money to a phone number detected.");
+            signals.add("Pedido suspeito para envio de dinheiro detectado.");
         }
 
         if (containsAny(content, "bonus", "bónus", "premio", "prémio",
@@ -118,7 +118,7 @@ public class FraudService {
                 "cashback", "recompensa")) {
 
             score += 25;
-            signals.add("Suspicious bonus, prize or promotion detected.");
+            signals.add("Bónus, prémio ou promoção suspeita detectada.");
         }
 
         if (containsAny(content, "m-pesa", "mpesa", "emola", "mkesh",
@@ -126,7 +126,7 @@ public class FraudService {
                 "letshego", "vodacom", "movitel", "tmcel")) {
 
             score += 25;
-            signals.add("Financial or mobile money service reference detected.");
+            signals.add("Referência a serviço financeiro ou dinheiro móvel detectada.");
         }
 
         if (containsAny(content, "pin", "otp", "codigo", "código",
@@ -135,7 +135,7 @@ public class FraudService {
                 "partilhe o codigo", "verificar conta")) {
 
             score += 40;
-            signals.add("PIN, OTP, password or verification code request detected.");
+            signals.add("Pedido de PIN, OTP ou código de verificação detectado.");
         }
 
         if (containsAny(content, "urgente", "agora", "imediatamente",
@@ -144,7 +144,7 @@ public class FraudService {
                 "reactivar", "reativar", "evitar bloqueio")) {
 
             score += 25;
-            signals.add("Urgency or pressure language detected.");
+            signals.add("Linguagem de urgência ou pressão detectada.");
         }
 
         if (containsAny(content, "conta bloqueada", "foi bloqueada",
@@ -152,7 +152,7 @@ public class FraudService {
                 "reativar conta", "validar conta")) {
 
             score += 30;
-            signals.add("Account blocking or reactivation scam pattern detected.");
+            signals.add("Tentativa suspeita de bloqueio ou reactivação de conta detectada.");
         }
 
         if (containsAny(content, "sou agente", "suporte mpesa",
@@ -161,7 +161,7 @@ public class FraudService {
                 "equipa tecnica", "equipa técnica")) {
 
             score += 20;
-            signals.add("Fake support or agent impersonation detected.");
+            signals.add("Falso agente ou suporte técnico detectado.");
         }
 
         if (
@@ -170,7 +170,7 @@ public class FraudService {
                         "manda", "envia", "deposita", "transferir")
         ) {
             score += 35;
-            signals.add("Prize or bonus combined with payment request detected.");
+            signals.add("Prémio ou bónus combinado com pedido de pagamento detectado.");
         }
 
         if (
@@ -178,7 +178,7 @@ public class FraudService {
                         && containsAny(content, "pin", "otp", "codigo", "código", "senha")
         ) {
             score += 35;
-            signals.add("Mobile money message asking for credentials detected.");
+            signals.add("Mensagem de dinheiro móvel a pedir credenciais detectada.");
         }
 
         if (score > 100) {
@@ -189,14 +189,14 @@ public class FraudService {
         String advice;
 
         if (score >= 70) {
-            classification = "FRAUD";
-            advice = "Do not send money, do not click links and never share PIN, OTP or passwords. Contact the official provider directly.";
+            classification = "FRAUDE";
+            advice = "Não envie dinheiro, não clique em links e nunca partilhe PIN, OTP ou palavras-passe. Contacte directamente o fornecedor oficial.";
         } else if (score >= 40) {
-            classification = "SUSPICIOUS";
-            advice = "This message has suspicious signs. Verify the sender before taking any action.";
+            classification = "SUSPEITO";
+            advice = "Esta mensagem apresenta sinais suspeitos. Verifique o remetente antes de tomar qualquer acção.";
         } else {
-            classification = "LEGITIMATE";
-            advice = "No strong fraud signs detected, but always verify financial messages carefully.";
+            classification = "LEGÍTIMO";
+            advice = "Nenhum sinal forte de fraude foi detectado, mas continue atento a mensagens financeiras.";
         }
 
         return new FraudResult(classification, score, signals, advice);
