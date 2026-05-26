@@ -5,17 +5,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25e9d2cb-eb17-43c9-ad54-06893662d0aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/controller/GamificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/gamification/AchievementResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/gamification/GamificationProfileResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/model/Achievement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/repository/AchievementRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/AchievementService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/GamificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/config/LearningPathDataSeeder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/config/QuizDataSeeder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/controller/FraudPatternController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/controller/LearningPathController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/controller/QuizController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/education/LearningPathResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/fraud/FraudPatternRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/fraud/FraudPatternResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/fraud/UrlAnalysisRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/fraud/UrlAnalysisResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/quiz/QuizOptionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/quiz/QuizQuestionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/quiz/QuizSubmitRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/dto/quiz/QuizSubmitResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/model/FraudPattern.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/model/LearningPath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/model/QuizOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/model/QuizQuestion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/model/QuizResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/repository/FraudPatternRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/repository/LearningPathRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/repository/QuizQuestionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/repository/QuizResultRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/FraudPatternService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/LearningPathService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/OcrService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/QuizService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/UrlReputationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/controller/FraudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/controller/FraudController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/FraudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/FraudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/GamificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/src/main/java/mz/ndzalama/api/service/GamificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/NdzalamaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/NdzalamaApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/controller/EducationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/controller/EducationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/controller/FraudController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/controller/FraudController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/LoginRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/RefreshRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/RefreshRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/RegisterRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/TokenResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/auth/TokenResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/education/FinancialTipResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/education/FinancialTipResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/fraud/FraudHistoryResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/fraud/FraudHistoryResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/fraud/FraudRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/fraud/FraudRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/fraud/FraudResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/dto/fraud/FraudResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/model/FraudReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/model/FraudReport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/repository/FraudReportRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/repository/FraudReportRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/security/JwtAuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/security/JwtAuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/security/JwtUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/security/JwtUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/security/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/security/UserDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/service/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/service/EducationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/service/EducationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/service/FraudService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/service/FraudService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/service/GamificationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ndzalama-backend/target/classes/mz/ndzalama/api/service/GamificationService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,9 +112,17 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aristides Guilherme\Desktop\Ndzalama IA - VM\ndzalama-backend\src\main\resources" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="25e9d2cb-eb17-43c9-ad54-06893662d0aa" name="Changes" comment="" />

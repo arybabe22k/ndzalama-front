@@ -7,6 +7,7 @@ import mz.ndzalama.api.model.User;
 import mz.ndzalama.api.repository.UserRepository;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
+import java.time.LocalDate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +36,7 @@ public class GamificationService {
         user.setPoints(newPoints);
         user.setLevel(calculateLevel(newPoints));
 
+        updateStreak(user);
         userRepository.save(user);
 
         // Awards badges after updating points and level.
@@ -122,6 +124,24 @@ public class GamificationService {
                     "Chegou ao nível 3 no Ndzalama IA."
             );
         }
+
+        if (safe(user.getStreakDays()) >= 3) {
+            achievementService.awardIfNotExists(
+                    user,
+                    "STREAK_3",
+                    "Consistência Inicial",
+                    "Usou o Ndzalama IA durante 3 dias seguidos."
+            );
+        }
+
+        if (safe(user.getStreakDays()) >= 7) {
+            achievementService.awardIfNotExists(
+                    user,
+                    "STREAK_7",
+                    "Semana Segura",
+                    "Manteve uma sequência de 7 dias de actividade."
+            );
+        }
     }
 
     private User getAuthenticatedUser(Authentication authentication) {
@@ -204,4 +224,30 @@ public class GamificationService {
     private int safe(Integer value) {
         return value == null ? 0 : value;
     }
+
+    // Updates user's daily activity streak.
+    private void updateStreak(User user) {
+
+        LocalDate today = LocalDate.now();
+        LocalDate lastActiveDate = user.getLastActiveDate();
+
+        if (lastActiveDate == null) {
+            user.setStreakDays(1);
+            user.setLastActiveDate(today);
+            return;
+        }
+
+        if (lastActiveDate.isEqual(today)) {
+            return;
+        }
+
+        if (lastActiveDate.plusDays(1).isEqual(today)) {
+            user.setStreakDays(safe(user.getStreakDays()) + 1);
+        } else {
+            user.setStreakDays(1);
+        }
+
+        user.setLastActiveDate(today);
+    }
+
 }

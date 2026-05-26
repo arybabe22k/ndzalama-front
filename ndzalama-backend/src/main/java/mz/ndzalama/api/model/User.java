@@ -2,6 +2,7 @@ package mz.ndzalama.api.model;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 // Represents a system user.
@@ -10,42 +11,36 @@ import java.time.LocalDateTime;
 @Table(name = "users")
 public class User {
 
-    // Primary key
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // User full name
     @Column(nullable = false, length = 100)
     private String name;
 
-    // Unique phone number used for login
     @Column(unique = true, nullable = false, length = 20)
     private String phone;
 
-    // Optional email
     @Column(unique = true, length = 120)
     private String email;
 
-    // Encrypted password
     @Column(nullable = false)
     private String password;
 
-    // Monthly financial goal
     @Column(name = "monthly_goal")
     private Integer monthlyGoal = 0;
 
-    // Gamification points
     private Integer points = 0;
 
-    // User level
     private Integer level = 1;
 
-    // Consecutive active days
     @Column(name = "streak_days")
     private Integer streakDays = 0;
 
-    // Account creation date
+    // Last day the user performed an activity.
+    @Column(name = "last_active_date")
+    private LocalDate lastActiveDate;
+
     @Column(name = "created_at")
     private LocalDateTime createdAt = LocalDateTime.now();
 
@@ -88,6 +83,10 @@ public class User {
         return streakDays;
     }
 
+    public LocalDate getLastActiveDate() {
+        return lastActiveDate;
+    }
+
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
@@ -126,6 +125,10 @@ public class User {
 
     public void setStreakDays(Integer streakDays) {
         this.streakDays = streakDays;
+    }
+
+    public void setLastActiveDate(LocalDate lastActiveDate) {
+        this.lastActiveDate = lastActiveDate;
     }
 
     public void setCreatedAt(LocalDateTime createdAt) {
