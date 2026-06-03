@@ -9,6 +9,7 @@ import 'learning_paths_screen.dart';
 import 'quizzes_screen.dart';
 import 'profile_screen.dart';
 import 'fraud_history_screen.dart';
+import 'streak_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -49,7 +50,6 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 24),
               _riskCard(),
               const SizedBox(height: 24),
-
               const Text(
                 'Scanner antifraude',
                 style: TextStyle(
@@ -58,13 +58,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-
               const SizedBox(height: 14),
-
               _scannerGrid(context),
-
               const SizedBox(height: 24),
-
               const Text(
                 'Educação financeira',
                 style: TextStyle(
@@ -73,9 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-
               const SizedBox(height: 14),
-
               _educationGrid(context),
             ],
           ),
@@ -99,9 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
             size: 34,
           ),
         ),
-
         const SizedBox(width: 14),
-
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -116,7 +108,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-
               const Text(
                 'Protecção financeira inteligente',
                 style: TextStyle(
@@ -162,9 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
               fontWeight: FontWeight.bold,
             ),
           ),
-
           SizedBox(height: 10),
-
           Text(
             'Analise mensagens, imagens e links suspeitos antes de agir.',
             style: TextStyle(
@@ -200,7 +189,6 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           },
         ),
-
         _actionCard(
           title: 'Imagem',
           icon: Icons.image_search,
@@ -214,7 +202,6 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           },
         ),
-
         _actionCard(
           title: 'Link',
           icon: Icons.link,
@@ -228,7 +215,6 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           },
         ),
-
         _actionCard(
           title: 'Histórico',
           icon: Icons.history,
@@ -253,7 +239,7 @@ class _HomeScreenState extends State<HomeScreen> {
       crossAxisCount: 2,
       crossAxisSpacing: 12,
       mainAxisSpacing: 12,
-      childAspectRatio: 1.25,
+      childAspectRatio: 1.15,
       children: [
         _wideCard(
           title: 'Dica diária',
@@ -269,7 +255,6 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           },
         ),
-
         _wideCard(
           title: 'Quizzes',
           subtitle: 'Teste o seu conhecimento',
@@ -284,7 +269,6 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           },
         ),
-
         _wideCard(
           title: 'Learning Paths',
           subtitle: 'Evolua por níveis',
@@ -299,7 +283,20 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           },
         ),
-
+        _wideCard(
+          title: 'Daily Streak',
+          subtitle: 'Mantenha a sequência',
+          icon: Icons.local_fire_department,
+          color: Colors.orange,
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => const StreakScreen(),
+              ),
+            );
+          },
+        ),
         _wideCard(
           title: 'Perfil',
           subtitle: 'Pontos e conquistas',
@@ -377,9 +374,7 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Icon(icon, color: color, size: 34),
-
               const Spacer(),
-
               Text(
                 title,
                 style: const TextStyle(
@@ -388,9 +383,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-
               const SizedBox(height: 4),
-
               Text(
                 subtitle,
                 style: const TextStyle(
