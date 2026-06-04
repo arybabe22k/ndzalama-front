@@ -49,7 +49,7 @@ class AuthService {
 
       return response.statusCode == 200 || response.statusCode == 201;
     } catch (e) {
-      return false;
-    }
+      print("ERROR LOGIN: $e");
+  rethrow;   }
   }
 }

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ndzalama_mobile/screens/InsightsScreen.dart';
+import 'package:ndzalama_mobile/screens/profile_screen.dart';
  
 import 'home_screen.dart';
-import 'profile_screen.dart';
+
 import 'analyze_text_screen.dart';
 import 'daily_tip_screen.dart';
  
@@ -19,6 +21,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     HomeScreen(),
     AnalyzeTextScreen(),
     DailyTipScreen(),
+    InsightsScreen(),
     ProfileScreen(),
   ];
  
@@ -43,6 +46,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
                 _navItem(1, Icons.shield_rounded, 'Scanner'),
                 _navItem(2, Icons.school_rounded, 'Educação'),
                 _navItem(3, Icons.person_rounded, 'Perfil'),
+                _navItem(4, Icons.settings_rounded, 'Configurações'),
               ],
             ),
           ),

@@ -47,7 +47,7 @@ class _AnalyzeImageScreenState extends State<AnalyzeImageScreen> {
       isLoading = true;
       result = null;
     });
- 
+  
     try {
       final token = await TokenStorage.getToken();
  

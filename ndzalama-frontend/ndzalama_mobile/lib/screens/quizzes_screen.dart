@@ -29,7 +29,7 @@ class _QuizzesScreenState extends State<QuizzesScreen> {
     super.initState();
     loadQuizzes();
   }
-
+      
   Future<void> loadQuizzes() async {
     try {
       final token = await TokenStorage.getToken();

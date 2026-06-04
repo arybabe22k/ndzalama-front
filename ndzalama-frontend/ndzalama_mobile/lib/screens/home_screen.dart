@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ndzalama_mobile/screens/add_transaction_screen.dart';
+import 'package:ndzalama_mobile/screens/transactions_screen.dart';
 
 import '../services/token_storage.dart';
 import 'analyze_text_screen.dart';
@@ -15,8 +17,7 @@ class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  State<HomeScreen> createState() =>
-      _HomeScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
@@ -47,8 +48,9 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               _header(),
-              const SizedBox(height: 24),
               _riskCard(),
+              const SizedBox(height: 16),
+              _buildAnalyzeCard(), // Card de análise de transação
               const SizedBox(height: 24),
               const Text(
                 'Scanner antifraude',
@@ -211,6 +213,19 @@ class _HomeScreenState extends State<HomeScreen> {
               context,
               MaterialPageRoute(
                 builder: (_) => const AnalyzeUrlScreen(),
+              ),
+            );
+          },
+        ),
+        _actionCard(
+          title: 'Transação',
+          icon: Icons.payment,
+          color: const Color(0xFF19A85B),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => const TransactionsScreen(),
               ),
             );
           },
@@ -390,6 +405,76 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Colors.white54,
                   fontSize: 12,
                 ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildAnalyzeCard() {
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [
+            Color(0xFF0B7A3B),
+            Color(0xFF19A85B),
+          ],
+        ),
+        borderRadius: BorderRadius.circular(22),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF19A85B).withOpacity(0.3),
+            blurRadius: 16,
+            offset: const Offset(0, 8),
+          ),
+        ],
+      ),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(22),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => const AddTransactionScreen(),
+            ),
+          );
+        },
+        child: const Padding(
+          padding: EdgeInsets.all(20),
+          child: Row(
+            children: [
+              Icon(
+                Icons.psychology,
+                color: Colors.white,
+                size: 40,
+              ),
+              SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Analisar Transação',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 4),
+                    Text(
+                      'Receba uma análise inteligente da IA em tempo real',
+                      style: TextStyle(color: Colors.white70),
+                    ),
+                  ],
+                ),
+              ),
+              Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.white70,
               ),
             ],
           ),
