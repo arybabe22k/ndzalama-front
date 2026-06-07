@@ -247,89 +247,88 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget _educationGrid(BuildContext context) {
-    return GridView.count(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      crossAxisCount: 2,
-      crossAxisSpacing: 12,
-      mainAxisSpacing: 12,
-      childAspectRatio: 1.15,
-      children: [
-        _wideCard(
-          title: 'Dica diária',
-          subtitle: 'Aprenda todos os dias',
-          icon: Icons.lightbulb,
-          color: const Color(0xFF19A85B),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (_) => const DailyTipScreen(),
-              ),
-            );
-          },
-        ),
-        _wideCard(
-          title: 'Quizzes',
-          subtitle: 'Teste o seu conhecimento',
-          icon: Icons.quiz,
-          color: Colors.purpleAccent,
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (_) => const QuizzesScreen(),
-              ),
-            );
-          },
-        ),
-        _wideCard(
-          title: 'Learning Paths',
-          subtitle: 'Evolua por níveis',
-          icon: Icons.school,
-          color: Colors.tealAccent,
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (_) => const LearningPathsScreen(),
-              ),
-            );
-          },
-        ),
-        _wideCard(
-          title: 'Daily Streak',
-          subtitle: 'Mantenha a sequência',
-          icon: Icons.local_fire_department,
-          color: Colors.orange,
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (_) => const StreakScreen(),
-              ),
-            );
-          },
-        ),
-        _wideCard(
-          title: 'Perfil',
-          subtitle: 'Pontos e conquistas',
-          icon: Icons.person,
-          color: Colors.indigoAccent,
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (_) => const ProfileScreen(),
-              ),
-            );
-          },
-        ),
-      ],
-    );
-  }
-
+Widget _educationGrid(BuildContext context) {
+  return GridView.count(
+    shrinkWrap: true,
+    physics: const NeverScrollableScrollPhysics(),
+    crossAxisCount: 2,
+    crossAxisSpacing: 12,
+    mainAxisSpacing: 12,
+    childAspectRatio: 1.15,
+    children: [
+      _wideCard(
+        title: 'Dica diária',
+        subtitle: 'Aprenda todos os dias',
+        icon: Icons.lightbulb,
+        color: const Color(0xFF19A85B),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => const DailyTipScreen(),
+            ),
+          );
+        },
+      ),
+      _wideCard(
+        title: 'Quizzes',
+        subtitle: 'Teste o seu conhecimento',
+        icon: Icons.quiz,
+        color: Colors.purpleAccent,
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => const QuizzesScreen(),
+            ),
+          );
+        },
+      ),
+      _wideCard(
+        title: 'Learning Paths',
+        subtitle: 'Evolua por níveis',
+        icon: Icons.school,
+        color: Colors.tealAccent,
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => const LearningPathsScreen(),
+            ),
+          );
+        },
+      ),
+      _wideCard(
+        title: 'Daily Streak',
+        subtitle: 'Mantenha a sequência',
+        icon: Icons.local_fire_department,
+        color: Colors.orange,
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => const StreakScreen(),
+            ),
+          );
+        },
+      ),
+      _wideCard(
+        title: 'Perfil',
+        subtitle: 'Pontos e conquistas',
+        icon: Icons.person,
+        color: Colors.indigoAccent,
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => const ProfileScreen(),
+            ),
+          );
+        },
+      ),
+    ],
+  );
+}
   Widget _actionCard({
     required String title,
     required IconData icon,

@@ -46,7 +46,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         Uri.parse('${ApiClient.baseUrl}/financial/health-report'),
         headers: {'Authorization': 'Bearer $token'},
       );
-      if (response.statusCode == 200) {
+      if (response.statusCode == 200) {        
         healthReport = jsonDecode(response.body);
       }
     } catch (e) {
@@ -58,7 +58,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     try {
       final token = await TokenStorage.getToken();
       final response = await http.get(
-        Uri.parse('${ApiClient.baseUrl}/financial-behavior/dashboard'),
+        Uri.parse('${ApiClient.baseUrl}/financial/dashboard'),
         headers: {'Authorization': 'Bearer $token'},
       );
       if (response.statusCode == 200) {
@@ -86,7 +86,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           ? const Center(
               child: CircularProgressIndicator(color: green),
             )
-          : SingleChildScrollView(
+          : SingleChildScrollView( 
               padding: const EdgeInsets.all(20),
               child: Column(
                 children: [

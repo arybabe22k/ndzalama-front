@@ -43,7 +43,7 @@ class _StreakScreenState extends State<StreakScreen> {
 
       if (response.statusCode == 200) {
         streak = jsonDecode(response.body);
-      } else if (
+      } else if ( 
           response.statusCode == 401 ||
           response.statusCode == 403
       ) {
@@ -68,7 +68,7 @@ class _StreakScreenState extends State<StreakScreen> {
 
     try {
       final token = await TokenStorage.getToken();
-
+  
       final response = await http.post(
         Uri.parse('${ApiClient.baseUrl}/gamification/check-in'),
         headers: {

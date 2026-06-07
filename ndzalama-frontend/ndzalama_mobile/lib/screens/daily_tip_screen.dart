@@ -35,9 +35,7 @@ class _DailyTipScreenState extends State<DailyTipScreen> {
 
       final response = await http.get(
         Uri.parse('${ApiClient.baseUrl}/education/daily-tip'),
-        headers: {
-          'Authorization': 'Bearer $token',
-        },
+        headers: {'Authorization': 'Bearer $token'},
       );
 
       if (response.statusCode == 200) {
@@ -55,36 +53,28 @@ class _DailyTipScreenState extends State<DailyTipScreen> {
   }
 
   void showMessage(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-      ),
-    );
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(message)));
   }
 
   @override
   Widget build(BuildContext context) {
     final title = tip?['title'] ?? 'Dica financeira';
-    final content =
-        tip?['message'] ?? 'Conteúdo da dica ainda não disponível.';
+    final content = tip?['message'] ?? 'Conteúdo da dica ainda não disponível.';
     final action = tip?['action'] ?? '';
     final category = tip?['category'] ?? 'Educação';
-
+    
     return Scaffold(
-      backgroundColor: bg,
+      backgroundColor: bg, 
       appBar: AppBar(
         backgroundColor: bg,
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.white),
-        title: const Text(
-          'Dica diária',
-          style: TextStyle(color: Colors.white),
-        ),
+        title: const Text('Dica diária', style: TextStyle(color: Colors.white)),
       ),
       body: isLoading
-          ? const Center(
-              child: CircularProgressIndicator(color: green),
-            )
+          ? const Center(child: CircularProgressIndicator(color: green))
           : Padding(
               padding: const EdgeInsets.all(20),
               child: Container(
@@ -108,11 +98,7 @@ class _DailyTipScreenState extends State<DailyTipScreen> {
                     const CircleAvatar(
                       radius: 34,
                       backgroundColor: Color(0x2219A85B),
-                      child: Icon(
-                        Icons.lightbulb,
-                        color: green,
-                        size: 38,
-                      ),
+                      child: Icon(Icons.lightbulb, color: green, size: 38),
                     ),
 
                     const SizedBox(height: 22),
@@ -155,16 +141,11 @@ class _DailyTipScreenState extends State<DailyTipScreen> {
                         decoration: BoxDecoration(
                           color: const Color(0x2219A85B),
                           borderRadius: BorderRadius.circular(18),
-                          border: Border.all(
-                            color: green.withOpacity(0.25),
-                          ),
+                          border: Border.all(color: green.withOpacity(0.25)),
                         ),
                         child: Row(
                           children: [
-                            const Icon(
-                              Icons.check_circle,
-                              color: green,
-                            ),
+                            const Icon(Icons.check_circle, color: green),
                             const SizedBox(width: 12),
                             Expanded(
                               child: Text(
